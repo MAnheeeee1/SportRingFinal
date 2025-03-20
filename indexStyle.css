@@ -1,0 +1,436 @@
+body {
+  margin: 0;
+  border: 0;
+  padding: 0;
+
+  background-color: black;
+}
+@font-face {
+  font-family: SportyFont;
+  src: url(VarsityTeam-Bold.otf);
+}
+nav {
+  height: 90px;
+  max-height: 150px;
+  background-color: rgb(128, 128, 128, 75%);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+@media (max-width: 480px) {
+  .nav-nav {
+    padding: 10px 15px;
+  }
+
+  #nav-LogotypHeader {
+    height: 50px;
+  }
+
+  .nav-MenyCenter button {
+    height: 50px;
+    font-size: 16px;
+  }
+}
+.nav-MenyCenter .active-nav-btn {
+  background-color: #ff4444;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-MenyCenter .active-nav-btn:hover {
+  background-color: #ff5555;
+  transform: translateY(-2px);
+}
+
+.nav-nav {
+  height: 90px;
+  background-color: rgba(18, 17, 17, 0.95);
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#nav-LogotypHeader {
+  height: 70px;
+  transition: transform 0.3s ease;
+}
+
+#nav-LogotypHeader:hover {
+  transform: scale(1.05);
+}
+
+.nav-MenyCenter {
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+}
+
+.nav-MenyCenter button {
+  height: 50px;
+  min-width: 120px;
+  padding: 0 25px;
+  background-color: transparent;
+  border: none;
+  border-radius: 100vh;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-MenyCenter button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.nav-MenyCenter a {
+  text-decoration: none;
+}
+
+.nav-MenyCenter .active-nav-btn:hover::after {
+  transform: rotate(45deg) translate(50%, 50%);
+}
+@media (max-width: 768px) {
+  .nav-nav {
+    padding: 10px 20px;
+  }
+
+  .nav-MenyCenter {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: rgba(18, 17, 17, 0.95);
+    padding: 20px;
+    border-radius: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    visibility: hidden;
+  }
+
+  .nav-MenyCenter.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-MenyCenter button {
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    border-radius: 12px;
+  }
+
+  .nav-mobile-menu {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  #nav-LogotypHeader {
+    height: 60px;
+  }
+}
+#LogotypHeader {
+  height: 125px;
+}
+
+.MenyCenter {
+  display: flex;
+  color: white;
+  margin: auto;
+  position: relative;
+  right: 105px;
+  background-color: rgb(5, 5, 5, 75%);
+  height: 80px;
+  border-radius: 100vh;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.MenyCenter button {
+  height: 50px;
+  min-width: 200px;
+  border-radius: 100vw;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: rgb(128, 128, 128, 55%);
+  border: none;
+  margin: 10px;
+
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+.MenyCenter a {
+  align-self: center;
+}
+
+.BakgrundIntro {
+  z-index: -99;
+  position: relative;
+  bottom: 110px;
+  color: white;
+  background-image: url(img/Sports-Image-Background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 85vh;
+  mask-image: linear-gradient(
+    to top rgb(0, 0, 0, 0) 0%,
+    rgb(0, 0, 0, 0.3) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to top,
+    rgb(0, 0, 0, 0) 0%,
+    rgb(0, 0, 0, 0.7) 100%
+  );
+}
+
+#SportRingenTextTillBild {
+  color: white;
+  font-family: SportyFont, Arial, Helvetica, sans-serif;
+  font-size: clamp(7vw, 9vw, 10vw);
+  position: relative;
+  bottom: 65vh;
+  margin: 0;
+  max-width: 700px;
+}
+#SportRingenTextTillBild span {
+  color: rgb(176, 2, 2);
+}
+
+.IntroBox1 {
+  display: flex;
+  height: 200px;
+  width: 145px;
+  position: relative;
+  left: 65vw;
+  bottom: 95vh;
+  background-color: rgb(128, 128, 128, 50%);
+  padding: 20px;
+  border-radius: 25px;
+}
+.IntroBox1 img {
+  height: 200px;
+  width: auto;
+}
+
+.IntroBox2 {
+  height: auto;
+  width: 133px;
+  position: relative;
+  left: 80vw;
+  bottom: 100vh;
+  background-color: rgb(128, 128, 128, 50%);
+  padding: 20px;
+  border-radius: 25px;
+}
+.IntroBox2 img {
+  height: 200px;
+  width: auto;
+}
+.logoBaner-img {
+  width: 10%;
+  height: 5%;
+}
+
+.logoBaner-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2%;
+  flex-wrap: wrap;
+  align-items: center;
+
+  border: 3px solid rgb(0, 0, 0);
+  background: rgb(0, 0, 0);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(83, 12, 28, 1) 100%
+  );
+  border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+  .logoBaner-img {
+    width: 15%;
+    height: auto;
+    padding: 5%;
+    object-fit: fill;
+  }
+}
+
+@media (max-width: 640px) {
+  .logoBaner-img {
+    width: 25%;
+    height: auto;
+    padding: 5%;
+    object-fit: fill;
+  }
+}
+
+@media (max-width: 500px) {
+  .logoBaner-img {
+    width: 50%;
+    height: auto;
+    padding: 5%;
+    object-fit: fill;
+  }
+}
+
+@media (max-width: 300px) {
+  .logoBaner-img {
+    width: 90%;
+    height: auto;
+    padding: 5%;
+    object-fit: fill;
+  }
+}
+
+.Hallbarhet {
+  background-image: url(img/image-Hallbar-utveckling-vaxter-och-pengar.png);
+  background-repeat: no-repeat;
+  position: relative;
+  bottom: 42vw;
+  width: auto;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+#Hallbarhet-dimmer {
+  background-color: rgb(0, 0, 0, 50%);
+  position: relative;
+  bottom: 93.9999999999vw;
+  height: 100vh;
+  width: 100vw;
+}
+#Hallbarhet-Title {
+  padding-top: 7vw;
+  padding-right: 2.5vw;
+  font-family: SportyFont, Arial, Helvetica, sans-serif;
+  font-size: clamp(5vw, 6vw, 8vw);
+  text-align: end;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+#Hallbarhet-Title span {
+  color: rgb(1, 167, 1);
+}
+
+.footer {
+  background: black;
+  color: white;
+  width: 100vw;
+  margin: 0;
+  padding: 30px;
+  border-top: 5px solid yellow;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  box-sizing: border-box;
+  position: relative;
+  left: 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-left h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 14px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  opacity: 0.7;
+}
+
+.app-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.app-buttons img {
+  width: 150px;
+  max-height: 40px; /* Ensuring app store buttons have a max height */
+  filter: invert(1); /* Makes the images white */
+}
+
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center; /* Aligns social icons properly */
+}
+
+.social-icons img {
+  width: 40px;
+  max-width: 40px; /* Restricting max width */
+  height: auto; /* Maintaining aspect ratio */
+  filter: invert(1); /* Makes the icons white */
+  transition: 0.3s;
+}
+
+.social-icons img:hover {
+  opacity: 0.7;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+  transition: 0.3s;
+}

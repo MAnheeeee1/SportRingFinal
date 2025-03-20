@@ -1,0 +1,26 @@
+.MenyCenter button:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.MenyCenter button {
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 929px) {
+  .IntroBox1,
+  .IntroBox2,
+  .MenyCenter {
+    display: none;
+  }
+  #SportRingenTextTillBild {
+    display: flex;
+    justify-self: center;
+  }
+}
+@media screen and (min-width: 929px) {
+  #SportRingenTextTillBild {
+    margin-left: 50px;
+  }
+}

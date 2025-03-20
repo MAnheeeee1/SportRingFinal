@@ -1,0 +1,742 @@
+/* Reset and Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  background-color: rgb(18, 17, 17);
+  color: aliceblue;
+}
+
+/* Navigation Styles */
+.nav-nav {
+  height: 90px;
+  background-color: rgba(18, 17, 17, 0.95);
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#nav-LogotypHeader {
+  height: 70px;
+  transition: transform 0.3s ease;
+}
+
+#nav-LogotypHeader:hover {
+  transform: scale(1.05);
+}
+
+.nav-MenyCenter {
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+}
+
+.nav-MenyCenter button {
+  height: 50px;
+  min-width: 120px;
+  padding: 0 25px;
+  background-color: transparent;
+  border: none;
+  border-radius: 100vh;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-MenyCenter button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.nav-MenyCenter a {
+  text-decoration: none;
+}
+
+/* Mobile Navigation Styles */
+.nav-mobile-menu {
+  display: none;
+}
+
+/* Hero Section Styles */
+.utbud-Hero {
+  padding: 40px;
+  display: flex;
+  min-height: 80vh;
+  max-width: 1600px;
+  margin: 0 auto;
+  align-items: center;
+  gap: 40px;
+}
+
+.utbud-utbud {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.utbud-utbud h1 {
+  margin-bottom: 60px;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.utbud-Hero-Info {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-right: 20px;
+  padding-left: 5rem;
+}
+
+.utbud-Hero-Info h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.utbud-Hero-Info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.utbud-Hero-Info-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.utbud-Hero-Info-underline::after {
+  content: "";
+  position: absolute;
+  left: -5px;
+  bottom: 5px;
+  width: calc(100% + 15px);
+  height: 18px;
+  background: #ff4444;
+  transform: rotate(-1deg) skewX(-2deg);
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+/* Logo Container Styles */
+.utbud-LogoContainer {
+  display: flex;
+  justify-content: center;
+  width: 55%;
+  gap: 50px;
+}
+
+.utbud-Logo-1,
+.utbud-Logo-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.utbud-Logo-2 {
+  transform: translateY(-40px);
+}
+
+.utbud-Logo-1 img,
+.utbud-Logo-2 img {
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  margin: 0;
+}
+
+.utbud-Logo-1 img:hover,
+.utbud-Logo-2 img:hover {
+  transform: scale(1.05);
+}
+
+/* Category Section Styles */
+.category-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px;
+  background-color: rgb(39, 36, 36);
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.category-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.category-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff4444;
+}
+
+.category-info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* Stats Styles */
+.category-stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.stat-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px 25px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.stat-item h4 {
+  color: #ff4444;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.stat-item p {
+  margin: 5px 0 0 0;
+  font-size: 1rem;
+}
+
+/* Category Buttons and Content */
+.category-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.category-btn {
+  padding: 12px 24px;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgb(39, 36, 36);
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+  background-color: rgb(50, 46, 46);
+  transform: translateY(-2px);
+}
+
+.category-btn.active {
+  background-color: #ff4444;
+  border-color: #ff4444;
+}
+
+/* Grid Container Styles */
+.utbud-utbud-gridcontainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 600px;
+  width: 90vw;
+  gap: 25px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.utbud-utbud-container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Card Styles */
+.utbud-utbud-card {
+  background-color: rgb(39, 36, 36);
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.utbud-utbud-card:hover {
+  transform: scale(1.02);
+}
+
+.utbud-utbud-erbjudandeIkon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 8px 16px;
+  background-color: #ff4444;
+  color: white;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.utbudErbjudande {
+  position: relative;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.utbudErbjudande h1 {
+  font-size: 2rem;
+  color: #ff4444;
+  margin: 0;
+}
+
+.utbudErbjudande h2 {
+  font-size: 1.5rem;
+  color: white;
+  margin: 0;
+}
+
+.utbudErbjudande p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+.utbudErbjudande-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.utbudErjbudande-Priser {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.utbudErjbudande-Priser h3 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.utbudErjbudande-Priser .line-through {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: line-through;
+  font-size: 1.4rem;
+}
+
+/* Brand Banner Styles */
+.brand-banner {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.brand-banner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.brand-banner img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: grayscale(100%) brightness(150%);
+}
+
+.brand-banner img:hover {
+  transform: scale(1.05);
+  filter: grayscale(0%) brightness(100%);
+}
+
+/* Discount Badge Styles */
+.discount-badge {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background-color: #ff4444;
+  color: white;
+  padding: 12px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  min-height: 50px;
+  transform: rotate(10deg);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Special styling for "Vårt utbud" button */
+.nav-MenyCenter .active-nav-btn {
+  background-color: #ff4444;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-MenyCenter .active-nav-btn:hover {
+  background-color: #ff5555;
+  transform: translateY(-2px);
+}
+
+/* Add subtle shine effect */
+.nav-MenyCenter .active-nav-btn::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+}
+
+.nav-MenyCenter .active-nav-btn:hover::after {
+  transform: rotate(45deg) translate(50%, 50%);
+}
+
+.footer {
+  background: black;
+  color: white;
+  width: 100vw;
+  margin: 0;
+  padding: 30px;
+  border-top: 5px solid yellow;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  box-sizing: border-box;
+  position: relative;
+  left: 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-left h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 14px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  opacity: 0.7;
+}
+
+.app-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.app-buttons img {
+  width: 150px;
+  max-height: 40px; /* Ensuring app store buttons have a max height */
+  filter: invert(1); /* Makes the images white */
+}
+
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center; /* Aligns social icons properly */
+}
+
+.social-icons img {
+  width: 40px;
+  max-width: 40px; /* Restricting max width */
+  height: auto; /* Maintaining aspect ratio */
+  filter: invert(1); /* Makes the icons white */
+  transition: 0.3s;
+}
+
+.social-icons img:hover {
+  opacity: 0.7;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+  transition: 0.3s;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .utbud-utbud-gridcontainer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    height: auto;
+  }
+
+  .utbud-utbud-gridcontainer .hockey,
+  .utbud-utbud-gridcontainer .löpning,
+  .utbud-utbud-gridcontainer .simning,
+  .utbud-utbud-gridcontainer .vandring {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .category-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .category-info {
+    gap: 20px;
+  }
+
+  .category-image {
+    height: 300px;
+  }
+
+  .category-stats {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .stat-item {
+    min-width: 150px;
+  }
+
+  .utbud-Hero {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .utbud-Hero-Info {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .utbud-LogoContainer {
+    width: 100%;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .utbud-Logo-2 {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-nav {
+    padding: 10px 20px;
+  }
+
+  .nav-MenyCenter {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: rgba(18, 17, 17, 0.95);
+    padding: 20px;
+    border-radius: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    visibility: hidden;
+  }
+
+  .nav-MenyCenter.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-MenyCenter button {
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    border-radius: 12px;
+  }
+
+  .nav-mobile-menu {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  #nav-LogotypHeader {
+    height: 60px;
+  }
+
+  .brand-banner-container {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .brand-banner img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .category-buttons {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .category-btn {
+    width: calc(50% - 10px);
+    padding: 10px;
+  }
+
+  .utbudErbjudande {
+    padding: 20px;
+  }
+
+  .utbudErbjudande h1 {
+    font-size: 1.75rem;
+  }
+
+  .utbudErbjudande h2 {
+    font-size: 1.25rem;
+  }
+
+  .utbudErbjudande-img {
+    height: 250px;
+  }
+
+  .utbudErjbudande-Priser h3 {
+    font-size: 1.5rem;
+  }
+
+  .utbudErjbudande-Priser .line-through {
+    font-size: 1.2rem;
+  }
+
+  .discount-badge {
+    top: -10px;
+    right: -10px;
+    padding: 8px;
+    font-size: 0.9rem;
+    min-width: 40px;
+    min-height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-nav {
+    padding: 10px 15px;
+  }
+
+  #nav-LogotypHeader {
+    height: 50px;
+  }
+
+  .nav-MenyCenter button {
+    height: 50px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .utbud-utbud-gridcontainer {
+    grid-template-columns: 1fr;
+  }
+
+  .utbud-utbud h1 {
+    font-size: 2rem;
+  }
+
+  .utbud-LogoContainer {
+    flex-direction: column;
+  }
+
+  .utbud-Logo-1,
+  .utbud-Logo-2 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .utbud-Hero-Info h1 {
+    font-size: 2.5rem;
+  }
+}
