@@ -193,7 +193,7 @@ nav {
   position: relative;
   bottom: 110px;
   color: white;
-  background-image: url(img/Sports-Image-Background.png);
+  background-image: url(img/index/Sports-Image-Background.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -223,13 +223,16 @@ nav {
   color: rgb(176, 2, 2);
 }
 
+#Picture-Gathering {
+  position: relative;
+  bottom: 95vh;
+}
 .IntroBox1 {
   display: flex;
   height: 200px;
   width: 145px;
   position: relative;
   left: 65vw;
-  bottom: 95vh;
   background-color: rgb(128, 128, 128, 50%);
   padding: 20px;
   border-radius: 25px;
@@ -244,7 +247,6 @@ nav {
   width: 133px;
   position: relative;
   left: 80vw;
-  bottom: 100vh;
   background-color: rgb(128, 128, 128, 50%);
   padding: 20px;
   border-radius: 25px;
@@ -262,7 +264,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 2%;
+  padding: 4%;
   flex-wrap: wrap;
   align-items: center;
 
@@ -276,59 +278,26 @@ nav {
   border-radius: 10px;
 }
 
-@media (max-width: 900px) {
-  .logoBaner-img {
-    width: 15%;
-    height: auto;
-    padding: 5%;
-    object-fit: fill;
-  }
-}
-
-@media (max-width: 640px) {
-  .logoBaner-img {
-    width: 25%;
-    height: auto;
-    padding: 5%;
-    object-fit: fill;
-  }
-}
-
-@media (max-width: 500px) {
-  .logoBaner-img {
-    width: 50%;
-    height: auto;
-    padding: 5%;
-    object-fit: fill;
-  }
-}
-
-@media (max-width: 300px) {
-  .logoBaner-img {
-    width: 90%;
-    height: auto;
-    padding: 5%;
-    object-fit: fill;
-  }
-}
-
 .Hallbarhet {
-  background-image: url(img/image-Hallbar-utveckling-vaxter-och-pengar.png);
+  background-image: url(img/index/image-Hallbar-utveckling-vaxter-och-pengar.png);
   background-repeat: no-repeat;
-  position: relative;
-  bottom: 42vw;
   width: auto;
   height: 100vh;
   background-size: cover;
   background-position: center;
 }
-#Hallbarhet-dimmer {
-  background-color: rgb(0, 0, 0, 50%);
-  position: relative;
-  bottom: 93.9999999999vw;
-  height: 100vh;
-  width: 100vw;
+.Hallbarhet::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.5;
+  z-index: 0;
 }
+
 #Hallbarhet-Title {
   padding-top: 7vw;
   padding-right: 2.5vw;
@@ -338,6 +307,7 @@ nav {
   color: white;
   position: relative;
   z-index: 2;
+  margin: 0;
 }
 #Hallbarhet-Title span {
   color: rgb(1, 167, 1);

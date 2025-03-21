@@ -3,14 +3,14 @@ const erbjudandeData = {
     title: "Hockey Utrustning",
     description:
       "Upptäck vårt breda sortiment av hockeyutrustning från ledande märken. Vi erbjuder allt från skridskor till klubbor och skydd, perfekt för både nybörjare och erfarna spelare. Med fokus på kvalitet och prestanda har vi noggrant valt ut produkter som möter kraven för både träning och match.",
-    image: "img/hockey.jpg",
+    image: "../img/utbud/hockey.jpg",
     erbjudande: {
       product: "CCM Super Tacks",
       productInfo:
         "Toppmodell av hockeyskridskor med avancerat värmeanpassat passformssystem, kolfiberkomposit konstruktion och SpeedBlade XS-hållare för maximal kraftöverföring och rörlighet på isen. Perfekt för elitspelare som söker premium prestanda.",
       previousPrice: 3500,
       salePrice: 2499,
-      productImg: "img/erbjudande/hockeyKlubba.jpg",
+      productImg: "../img/utbud/hockeyKlubba.jpg",
     },
     stats: {
       products: "150+",
@@ -22,14 +22,14 @@ const erbjudandeData = {
     title: "Löpning & Jogging",
     description:
       "Hitta den perfekta utrustningen för din löpning. Vi har ett stort utbud av skor, kläder och tillbehör som hjälper dig att nå dina träningsmål. Från lätta tävlingsskor till stabila träningsskor, och från andningsbar löparklädsel till smarta tillbehör - allt för att optimera din löpupplevelse.",
-    image: "img/löpning.jpg",
+    image: "../img/utbud/löpning.jpg",
     erbjudande: {
       product: "Nike Air Zoom Pegasus",
       productInfo:
         "Legendariska löparskor med React skumteknologi för responsiv stötdämpning, andningsbart meshmaterial och Zoom Air-enheter i framfot och häl. Mångsidiga nog för daglig träning och långdistanslöpning, med utmärkt hållbarhet och komfort.",
       previousPrice: 1200,
       salePrice: 899,
-      productImg: "img/erbjudande/pegasusNike.jpg",
+      productImg: "../img/utbud/pegasusNike.jpg",
     },
     stats: {
       products: "200+",
@@ -41,14 +41,14 @@ const erbjudandeData = {
     title: "Simning",
     description:
       "Dyk in i vårt sortiment av simutrustning. Från tävlingsdräkter till träningsaccessoarer, vi har allt du behöver för att förbättra din simning. Vi erbjuder högkvalitativ utrustning för både motionssimmare och tävlingsatleter, med fokus på prestanda och hållbarhet i vattnet.",
-    image: "img/simning.jpg",
+    image: "../img/utbud/simning.jpg",
     erbjudande: {
       product: "Speedo Fastskin",
       productInfo:
         "Elit-tävlingsdräkt utvecklad med avancerad kompressionsteknologi och vattenavvisande material. Har anatomisk passform, reducerad vattenmotståndsdesign och klortåligt material. Godkänd för FINA-tävlingar och perfekt för seriösa simmare som söker optimal prestanda.",
       previousPrice: 800,
       salePrice: 599,
-      productImg: "img/erbjudande/speedo.jpg",
+      productImg: "../img/utbud/speedo.jpg",
     },
     stats: {
       products: "100+",
@@ -60,14 +60,14 @@ const erbjudandeData = {
     title: "Vandring & Outdoor",
     description:
       "Utforska naturen med rätt utrustning. Vi erbjuder kvalitetsprodukter för alla typer av äventyr, från dagsvandringar till längre expeditioner. Vårt sortiment omfattar vattentäta kängor, tekniska kläder, och praktisk utrustning som ryggsäckar och vandringsstavar - allt du behöver för en säker och bekväm naturupplevelse.",
-    image: "img/vandring.jpg",
+    image: "../img/utbud/vandring.jpg",
     erbjudande: {
       product: "Salomon X Ultra 3",
       productInfo:
         "Avancerade vandringsskor som kombinerar löparskonas smidighet med vandringskängans stöd. Utrustade med Gore-Tex vattentätt skydd, SensiFit system för precis passform, Contagrip® yttersula för överlägset grepp på varierande terräng, och skyddande tåhätta. Perfekt för teknisk vandring och heldagskomfort.",
       previousPrice: 1500,
       salePrice: 1199,
-      productImg: "img/erbjudande/salomon.jpg",
+      productImg: "../img/utbud/salomon.jpg",
     },
     stats: {
       products: "180+",
@@ -145,70 +145,4 @@ kategoriKnappar.forEach((button) => {
   });
 });
 
-let timeout;
-let lastScrollTop = 0;
-const nav = document.querySelector(".nav-nav");
-let isHovering = false;
-
-// Function to show nav
-function showNav() {
-  nav.style.transform = "translateY(0)";
-  nav.style.opacity = "1";
-}
-
-// Function to hide nav
-function hideNav() {
-  nav.style.transform = "translateY(-100%)";
-  nav.style.opacity = "0";
-}
-
-// Add transition styles to nav
-nav.style.transition = "all 0.3s ease";
-
-// Add these event listeners to the nav element
-nav.addEventListener("mouseenter", () => {
-  isHovering = true;
-  showNav();
-  clearTimeout(timeout);
-});
-
-nav.addEventListener("mouseleave", () => {
-  isHovering = false;
-  if (
-    lastScrollTop >
-    (heroSection ? heroSection.offsetTop + heroSection.offsetHeight : 300)
-  ) {
-    timeout = setTimeout(hideNav, 3000);
-  }
-});
-
-// Modify the scroll event handler
-document.addEventListener("scroll", () => {
-  const scrollTop = window.scrollY || document.documentElement.scrollTop;
-  const heroSection = document.querySelector(".utbud-Hero");
-  const heroBottom = heroSection
-    ? heroSection.offsetTop + heroSection.offsetHeight
-    : 300;
-
-  // Always show nav when in hero section
-  if (scrollTop <= heroBottom) {
-    showNav();
-    return;
-  }
-
-  // Show nav only when scrolling up
-  if (scrollTop < lastScrollTop) {
-    showNav();
-    clearTimeout(timeout);
-    if (!isHovering) {
-      timeout = setTimeout(hideNav, 3000); // Hide after 3 seconds of no scrolling
-    }
-  } else {
-    // Hide nav when scrolling down, but not if mouse is hovering
-    if (!isHovering) {
-      hideNav();
-    }
-  }
-
-  lastScrollTop = scrollTop;
-});
+showDeals("hockey");

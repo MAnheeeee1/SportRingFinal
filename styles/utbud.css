@@ -272,180 +272,6 @@ body {
   margin: 0 auto;
 }
 
-.utbud-utbud-container {
-  width: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
-}
-
-/* Card Styles */
-.utbud-utbud-card {
-  background-color: rgb(39, 36, 36);
-  border-radius: 25px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  position: relative;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-  overflow: hidden;
-}
-
-.utbud-utbud-card:hover {
-  transform: scale(1.02);
-}
-
-.utbud-utbud-erbjudandeIkon {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  padding: 8px 16px;
-  background-color: #ff4444;
-  color: white;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.utbudErbjudande {
-  position: relative;
-  padding: 30px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.utbudErbjudande h1 {
-  font-size: 2rem;
-  color: #ff4444;
-  margin: 0;
-}
-
-.utbudErbjudande h2 {
-  font-size: 1.5rem;
-  color: white;
-  margin: 0;
-}
-
-.utbudErbjudande p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8);
-  margin: 0;
-}
-
-.utbudErbjudande-img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.utbudErjbudande-Priser {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.utbudErjbudande-Priser h3 {
-  margin: 0;
-  font-size: 1.8rem;
-}
-
-.utbudErjbudande-Priser .line-through {
-  color: rgba(255, 255, 255, 0.5);
-  text-decoration: line-through;
-  font-size: 1.4rem;
-}
-
-/* Brand Banner Styles */
-.brand-banner {
-  margin-top: 30px;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.brand-banner-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-}
-
-.brand-banner img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-  filter: grayscale(100%) brightness(150%);
-}
-
-.brand-banner img:hover {
-  transform: scale(1.05);
-  filter: grayscale(0%) brightness(100%);
-}
-
-/* Discount Badge Styles */
-.discount-badge {
-  position: absolute;
-  top: -15px;
-  right: -15px;
-  background-color: #ff4444;
-  color: white;
-  padding: 12px;
-  border-radius: 50%;
-  font-weight: bold;
-  font-size: 1.1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 50px;
-  min-height: 50px;
-  transform: rotate(10deg);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Special styling for "Vårt utbud" button */
-.nav-MenyCenter .active-nav-btn {
-  background-color: #ff4444;
-  color: white;
-  position: relative;
-  overflow: hidden;
-}
-
-.nav-MenyCenter .active-nav-btn:hover {
-  background-color: #ff5555;
-  transform: translateY(-2px);
-}
-
-/* Add subtle shine effect */
-.nav-MenyCenter .active-nav-btn::after {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    to bottom right,
-    rgba(255, 255, 255, 0.2) 0%,
-    rgba(255, 255, 255, 0) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  transform: rotate(45deg);
-  transition: all 0.3s ease;
-}
-
-.nav-MenyCenter .active-nav-btn:hover::after {
-  transform: rotate(45deg) translate(50%, 50%);
-}
-
 .footer {
   background: black;
   color: white;
@@ -538,205 +364,77 @@ body {
   transition: 0.3s;
 }
 
-/* Responsive Styles */
-@media (max-width: 992px) {
-  .utbud-utbud-gridcontainer {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    height: auto;
-  }
-
-  .utbud-utbud-gridcontainer .hockey,
-  .utbud-utbud-gridcontainer .löpning,
-  .utbud-utbud-gridcontainer .simning,
-  .utbud-utbud-gridcontainer .vandring {
-    grid-column: auto;
-    grid-row: auto;
-  }
-
-  .category-section {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .category-info {
-    gap: 20px;
-  }
-
-  .category-image {
-    height: 300px;
-  }
-
-  .category-stats {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .stat-item {
-    min-width: 150px;
-  }
-
-  .utbud-Hero {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .utbud-Hero-Info {
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-    align-items: center;
-  }
-
-  .utbud-LogoContainer {
-    width: 100%;
-    flex-direction: row;
-    gap: 20px;
-  }
-
-  .utbud-Logo-2 {
-    transform: translateY(0);
-  }
+/* Styling for utbudErbjudande */
+.utbudErbjudande {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(39, 36, 36, 0.95);
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: white;
 }
 
-@media (max-width: 768px) {
-  .nav-nav {
-    padding: 10px 20px;
-  }
-
-  .nav-MenyCenter {
-    position: fixed;
-    top: 90px;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    background-color: rgba(18, 17, 17, 0.95);
-    padding: 20px;
-    border-radius: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    transform: translateY(-100%);
-    opacity: 0;
-    transition: all 0.3s ease;
-    visibility: hidden;
-  }
-
-  .nav-MenyCenter.active {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .nav-MenyCenter button {
-    width: 100%;
-    height: 60px;
-    font-size: 18px;
-    border-radius: 12px;
-  }
-
-  .nav-mobile-menu {
-    display: block;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
-  }
-
-  #nav-LogotypHeader {
-    height: 60px;
-  }
-
-  .brand-banner-container {
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-
-  .brand-banner img {
-    width: 60px;
-    height: 60px;
-  }
-
-  .category-buttons {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .category-btn {
-    width: calc(50% - 10px);
-    padding: 10px;
-  }
-
-  .utbudErbjudande {
-    padding: 20px;
-  }
-
-  .utbudErbjudande h1 {
-    font-size: 1.75rem;
-  }
-
-  .utbudErbjudande h2 {
-    font-size: 1.25rem;
-  }
-
-  .utbudErbjudande-img {
-    height: 250px;
-  }
-
-  .utbudErjbudande-Priser h3 {
-    font-size: 1.5rem;
-  }
-
-  .utbudErjbudande-Priser .line-through {
-    font-size: 1.2rem;
-  }
-
-  .discount-badge {
-    top: -10px;
-    right: -10px;
-    padding: 8px;
-    font-size: 0.9rem;
-    min-width: 40px;
-    min-height: 40px;
-  }
+.utbudErbjudande h1 {
+  font-size: 2rem;
+  color: #ff4444;
+  margin-bottom: 10px;
 }
 
-@media (max-width: 480px) {
-  .nav-nav {
-    padding: 10px 15px;
-  }
-
-  #nav-LogotypHeader {
-    height: 50px;
-  }
-
-  .nav-MenyCenter button {
-    height: 50px;
-    font-size: 16px;
-  }
+.utbudErbjudande h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
 }
 
-@media (max-width: 576px) {
-  .utbud-utbud-gridcontainer {
-    grid-template-columns: 1fr;
-  }
+.utbudErbjudande-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  margin: 15px 0;
+  transition: transform 0.3s ease;
+}
 
-  .utbud-utbud h1 {
-    font-size: 2rem;
-  }
+.utbudErbjudande-img:hover {
+  transform: scale(1.05);
+}
 
-  .utbud-LogoContainer {
-    flex-direction: column;
-  }
+.utbudErbjudande p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
 
-  .utbud-Logo-1,
-  .utbud-Logo-2 {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+.utbudErjbudande-Priser {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
 
-  .utbud-Hero-Info h1 {
-    font-size: 2.5rem;
-  }
+.utbudErjbudande-Priser h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.utbudErjbudande-Priser .line-through {
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ff4444;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
