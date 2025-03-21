@@ -173,13 +173,13 @@ body {
 
 /* Category Section Styles */
 .category-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 40px;
   padding: 40px;
   background-color: rgb(39, 36, 36);
   border-radius: 25px;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 2rem;
 }
 
 .category-info {
@@ -329,22 +329,22 @@ body {
 
 .app-buttons img {
   width: 150px;
-  max-height: 40px; /* Ensuring app store buttons have a max height */
-  filter: invert(1); /* Makes the images white */
+  max-height: 40px;
+  filter: invert(1);
 }
 
 .social-icons {
   margin-top: 20px;
   display: flex;
   gap: 10px;
-  align-items: center; /* Aligns social icons properly */
+  align-items: center;
 }
 
 .social-icons img {
   width: 40px;
-  max-width: 40px; /* Restricting max width */
-  height: auto; /* Maintaining aspect ratio */
-  filter: invert(1); /* Makes the icons white */
+  max-width: 40px;
+  height: auto;
+  filter: invert(1);
   transition: 0.3s;
 }
 
@@ -367,15 +367,15 @@ body {
 /* Styling for utbudErbjudande */
 .utbudErbjudande {
   display: flex;
+  position: relative;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   background-color: rgba(39, 36, 36, 0.95);
   padding: 20px;
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-  text-align: center;
+  text-align: left;
   color: white;
 }
 
@@ -392,15 +392,10 @@ body {
 
 .utbudErbjudande-img {
   width: 100%;
-  max-width: 300px;
   height: auto;
   border-radius: 10px;
   margin: 15px 0;
   transition: transform 0.3s ease;
-}
-
-.utbudErbjudande-img:hover {
-  transform: scale(1.05);
 }
 
 .utbudErbjudande p {
@@ -418,7 +413,7 @@ body {
 }
 
 .utbudErjbudande-Priser h3 {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   margin: 0;
 }
 
@@ -429,12 +424,27 @@ body {
 
 .discount-badge {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: -10px;
+  right: -10px;
   background-color: #ff4444;
   color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
+  height: 80px;
+  width: 80px;
+  text-align: center;
+  border-radius: 50%;
   font-size: 0.9rem;
   font-weight: bold;
+  transform: rotate(20deg);
+}
+
+@media only screen and (max-width: 800px) {
+  .utbud-Hero {
+    flex-direction: column;
+  }
+  .category-section {
+    flex-direction: column;
+  }
+  .utbud-Hero-Info {
+    width: 90%;
+  }
 }

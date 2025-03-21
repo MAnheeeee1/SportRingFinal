@@ -89,3 +89,68 @@
   filter: brightness(0) invert(1);
   transition: 0.3s;
 }
+
+.nav-nav {
+  height: 90px;
+  background-color: rgba(18, 17, 17, 0.95);
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#nav-LogotypHeader {
+  height: 70px;
+  transition: transform 0.3s ease;
+}
+
+#nav-LogotypHeader:hover {
+  transform: scale(1.05);
+}
+
+.nav-MenyCenter {
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+}
+
+.nav-MenyCenter button {
+  height: 50px;
+  min-width: 120px;
+  padding: 0 25px;
+  background-color: transparent;
+  border: none;
+  border-radius: 100vh;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-MenyCenter button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.nav-MenyCenter a {
+  text-decoration: none;
+}
+
+/* Mobile Navigation Styles */
+.nav-mobile-menu {
+  display: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
