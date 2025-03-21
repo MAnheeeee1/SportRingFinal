@@ -164,11 +164,9 @@ body {
   border-radius: 10px;
   transition: transform 0.3s ease;
   margin: 0;
-}
-
-.utbud-Logo-1 img:hover,
-.utbud-Logo-2 img:hover {
-  transform: scale(1.05);
+  box-shadow: rgba(37, 37, 37, 0.25) 0px 54px 55px,
+    rgb(77, 73, 73) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(146, 141, 141, 0.09) 0px -3px 5px;
 }
 
 /* Category Section Styles */

@@ -1,22 +1,234 @@
+.hero {
+  background-image: url(../img/hållbarhet/berg.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 85vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 3rem;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin-left: 20px;
+}
+.card {
+  display: flex;
+  background: rgba(51, 48, 48, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(154, 151, 151, 0.3);
+  padding: 20px;
+  width: 33%;
+  justify-content: space-between;
+}
+.card h2 {
+  margin-bottom: 0;
+}
+.cardContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 20px;
+  margin-bottom: 1.5rem;
+}
+.card img {
+  height: 100px;
+}
+
+.vårVision {
+  padding: 20px;
+  padding-top: 5rem;
+  display: flex;
+  height: 80vh;
+  background-color: black;
+  color: white;
+  padding-bottom: 10rem;
+}
+.container1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container1 .vår {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+.container2 h5 {
+  font-size: 2rem;
+  margin-top: 0;
+  color: rgb(171, 168, 168);
+}
+.container2 p {
+  text-align: right;
+}
+.container2 img {
+  border-radius: 25px;
+  border: 2px solid green;
+  margin-right: 0;
+}
+.brighter {
+  color: rgb(55, 92, 55);
+}
+.olikaCerti {
+  padding-bottom: 10rem;
+  background-color: black;
+}
+.samarbeteFritis {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  position: relative;
+  padding-top: 5rem;
+}
+
+.samarbeteFritis h1 {
+  position: absolute;
+  top: -2rem;
+  color: aliceblue;
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 0;
+}
+
+.green {
+  background-color: green;
+  padding: 0 10px;
+}
+.samarbeteFritis img {
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  width: 50%;
+  border-radius: 25px;
+}
+.merInfoOmFritis {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  display: flex;
+  padding-top: 5rem;
+}
+.merInfoOmFritis img {
+  width: 50%;
+  border-radius: 25px;
+}
+.merInfoOmFritis .info {
+  width: 50%;
+}
+.category-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.category-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff4444;
+}
+
+.category-info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.category-stats {
+  display: flex;
+  margin-top: 20px;
+  padding-right: 20px;
+  gap: 20px;
+}
+
+.stat-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px 25px;
+  border-radius: 15px;
+  width: 33%;
+  text-align: center;
+}
+
+.stat-item h4 {
+  color: #ff4444;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.stat-item p {
+  margin: 5px 0 0 0;
+  font-size: 1rem;
+}
+
+.category-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.category-btn {
+  padding: 12px 24px;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgb(39, 36, 36);
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+  background-color: rgb(50, 46, 46);
+  transform: translateY(-2px);
+}
+
+.category-btn.active {
+  background-color: #ff4444;
+  border-color: #ff4444;
+}
 .footer {
   background: black;
   color: white;
   width: 100vw;
   margin: 0;
-  padding: 30px;
-  border-top: 5px solid yellow;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  border-top: 5px solid red;
   text-align: left;
   box-sizing: border-box;
-  position: relative;
-  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .footer-content {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   flex-wrap: wrap;
-  align-items: center;
+  gap: 20px;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 250px;
 }
 
 .footer-left h2 {
@@ -47,47 +259,48 @@
   opacity: 0.7;
 }
 
-.app-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.contact-form {
+  margin-right: 15%;
+  max-width: 33%;
+  width: 100%;
 }
 
-.app-buttons img {
-  width: 150px;
-  max-height: 40px; /* Ensuring app store buttons have a max height */
-  filter: invert(1); /* Makes the images white */
+.contact-form h2 {
+  font-weight: bold;
+  font-family: Helvetica;
 }
 
-.social-icons {
-  margin-top: 20px;
-  display: flex;
-  gap: 10px;
-  align-items: center; /* Aligns social icons properly */
+.contact-form p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 15px;
+  font-family: Helvetica;
 }
 
-.social-icons img {
-  width: 40px;
-  max-width: 40px; /* Restricting max width */
-  height: auto; /* Maintaining aspect ratio */
-  filter: invert(1); /* Makes the icons white */
-  transition: 0.3s;
+.contact-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 25px;
 }
 
-.social-icons img:hover {
-  opacity: 0.7;
+.contact-form button {
+  background: red;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+}
+
+.contact-form button:hover {
+  opacity: 0.8;
 }
 
 .footer-bottom {
-  margin-top: 20px;
-  font-size: 14px;
   text-align: center;
-}
-.social-icons img {
-  width: 30px;
-  height: 30px;
-  filter: brightness(0) invert(1);
-  transition: 0.3s;
+  font-size: 14px;
+  padding-top: 10px;
+  width: 100%;
 }
 
 .nav-nav {
@@ -153,4 +366,5 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
